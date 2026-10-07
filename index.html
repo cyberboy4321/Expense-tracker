@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <!-- HEADER -->
+     <header>
+        <h1>Expense Tracker</h1>
+
+        <div class="balance-container">
+            <p>Balance: <span>$0.00</span></p>
+            <p>Income: <span>$0.00</span></p>
+            <p>Expenses: <span>$0.00</span></p>
+        </div>
+     </header>
+
+
+     <main>
+        <section class="form-section">
+            <h2>Add Transaction</h2>
+
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" placeholder="e.g. Groceries" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" step="0.01" placeholder="0.00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type" required>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="food">Food</option>
+                        <option value="transport">Transport</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="bills">Bills</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+
+        <section class="filter-section">
+            <h2>Filter</h2>
+            <div class="filters">
+                <select id="filter-type">
+                    <option value="all">All Types</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="bills">Bills</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <input type="month" id="filter-month">
+            </div>
+        </section>
+
+
+        <section class="list-section">
+            <h2>Transactions</h2>
+            <ul id="transaction-list"></ul>
+        </section>
+     </main>
+</body>
+</html>
