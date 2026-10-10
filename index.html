@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- HEADER -->
-     <header>
+    <header>
         <h1>Expense Tracker</h1>
 
         <div class="balance-container">
@@ -16,10 +16,10 @@
             <p>Income: <span id="income">$0.00</span></p>
             <p>Expenses: <span id="expenses">$0.00</span></p>
         </div>
-     </header>
+    </header>
 
-
-     <main>
+    <main>
+        <!-- FORM -->
         <section class="form-section">
             <h2>Add Transaction</h2>
 
@@ -58,11 +58,14 @@
                     <input type="date" id="date" required>
                 </div>
 
-                <button type="submit">Add Transaction</button>
+                <div class="form-actions">
+                    <button type="submit">Add Transaction</button>
+                    <button type="button" id="cancel-edit" class="hidden">Cancel</button>
+                </div>
             </form>
         </section>
 
-
+        <!-- FILTERS -->
         <section class="filter-section">
             <h2>Filter</h2>
             <div class="filters">
@@ -85,11 +88,13 @@
             </div>
         </section>
 
-
+        <!-- LIST -->
         <section class="list-section">
             <h2>Transactions</h2>
             <ul id="transaction-list"></ul>
         </section>
-     </main>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
